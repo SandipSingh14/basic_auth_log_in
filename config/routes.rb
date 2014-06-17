@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+
+root :to=>"home#index"
+get "sign_in" => "authentication#sign_in"
+get "signed_out" => "authentication#signed_out"
+get "change_password" => "authentication#change_password"
+get "forgot_password" => "authentication#forgot_password"
+get "new_user" => "authentication#new_user"
+get "password_sent" => "authentication#password_sent"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -53,4 +61,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+	
 end
