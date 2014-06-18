@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 root :to=>"home#index"
+post "sign_in" => "authentication#login"
 get "sign_in" => "authentication#sign_in"
 get "signed_out" => "authentication#signed_out"
 get "change_password" => "authentication#change_password"
